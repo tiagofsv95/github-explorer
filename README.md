@@ -1,44 +1,56 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img alt="GoStack" src="https://storage.googleapis.com/golden-wind/bootcamp-gostack/header-desafios.png" />
 
-## Available Scripts
+<h3 align="center">
+  Github Explorer
+</h3>
 
-In the project directory, you can run:
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/rocketseat/bootcamp-gostack-desafios?color=%2304D361">
 
-### `yarn start`
+  <a href="https://www.linkedin.com/in/tiago-felipe-sanches-vieira-457764139/r">
+    <img alt="Made by Tiago Felipe" src="https://img.shields.io/badge/made%20by-Tiago%20Felipe-%2304D361">
+  </a>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361">
+</p>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+<p align="center">
+  <a href="#rocket">Sobre o projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-licença">Licença</a>
+</p>
 
-### `yarn test`
+## :rocket: Sobre
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Uma aplicação aonde é possivel buscar um repositório no github e ver alguns detalhes desse repositorio, como sua lista de issues abertas.
 
-### `yarn build`
+Para executar o projeto basta dar um `git clone https://github.com/tiagofsv95/github-explorer.git` no seu console e depois `yarn` para instalar as dependencias. Depois de instalar todas as dependencias basta executar `yarn start`.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Ferramentas utilizadas na aplicação
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+-**react**;
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-**axios**;
 
-### `yarn eject`
+-**react-icons**;
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+-**styled-components**;
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-**typescript**;
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+-**eslint**;
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+-**prettier**;
 
-## Learn More
+### Funcionalidades da aplicação
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **`Adicionar um repositório válido do github`**: Deve ser capaz de adicionar em uma lista, os repositorios validos encontrados no github.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **`Ver detalhes de um repositório`**: Ao clicar no repositório é possivel ver detalhes do repositorio, e uma lista com suas issues.
+
+## :memo: Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+Feito com ❤️ by Tiago Felipe
