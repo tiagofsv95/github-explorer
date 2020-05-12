@@ -6,7 +6,8 @@ import { ThemeContext } from 'styled-components';
 
 import api from '../../services/api';
 
-import logo from '../../assets/logo.svg';
+import logoLight from '../../assets/logo.svg';
+import logoDark from '../../assets/logo-dark.svg';
 
 import { Header, RepositoryInfo, Issues } from './styles';
 
@@ -41,6 +42,8 @@ interface Props {
 
 const Repository: React.FC<Props> = ({ toggleTheme }) => {
   const { colors, title } = useContext(ThemeContext);
+
+  const logo = title === 'light' ? logoLight : logoDark;
 
   const { params } = useRouteMatch<RepositoryParams>();
   const [repository, setRepository] = useState<Repository | null>(null);

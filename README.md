@@ -47,8 +47,15 @@ Para executar o projeto basta dar um `git clone https://github.com/tiagofsv95/gi
 
 - **`Ver detalhes de um repositório`**: Ao clicar no repositório é possivel ver detalhes do repositorio, e uma lista com suas issues.
 
+<div align="center">
+
 ![Desafio Demo](demo/demo.gif)
 
+Dark Mode Implemented!
+
+![Desafio Demo](demo/demo-dark-mode.gif)
+
+</div>
 ## :memo: Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
