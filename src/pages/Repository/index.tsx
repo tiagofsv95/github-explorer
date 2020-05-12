@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { useRouteMatch, Link } from 'react-router-dom';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import Switch from 'react-switch';
+import { ThemeContext } from 'styled-components';
 
 import api from '../../services/api';
 
@@ -33,7 +35,13 @@ interface Issue {
   };
 }
 
-const Repository: React.FC = () => {
+interface Props {
+  toggleTheme(): void;
+}
+
+const Repository: React.FC<Props> = ({ toggleTheme }) => {
+  const { colors, title } = useContext(ThemeContext);
+
   const { params } = useRouteMatch<RepositoryParams>();
   const [repository, setRepository] = useState<Repository | null>(null);
   const [issues, setIssues] = useState<Issue[]>([]);
@@ -56,10 +64,25 @@ const Repository: React.FC = () => {
     <>
       <Header>
         <img src={logo} alt="GithubExplorer" />
+
         <Link to="/">
           <FiChevronLeft size={16} />
           voltar
         </Link>
+
+        <Switch
+          onChange={toggleTheme}
+          checked={title === 'light'}
+          checkedIcon={false}
+          uncheckedIcon={false}
+          height={15}
+          width={50}
+          handleDiameter={30}
+          offColor={colors.primaryText}
+          onColor={colors.primaryText}
+          offHandleColor={colors.primaryText}
+          onHandleColor={colors.primaryText}
+        />
       </Header>
       {repository && (
         <RepositoryInfo>

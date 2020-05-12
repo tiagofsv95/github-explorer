@@ -40,12 +40,12 @@ export const RepositoryInfo = styled.section`
 
       strong {
         font-size: 36px;
-        color: #3d3d4d;
+        color: ${(props) => props.theme.colors.primaryText};
       }
 
       p {
         font-size: 18px;
-        color: #737380;
+        color: ${(props) => props.theme.colors.secundaryText};
         margin-top: 4px;
       }
     }
@@ -64,13 +64,13 @@ export const RepositoryInfo = styled.section`
       strong {
         display: block;
         font-size: 36px;
-        color: #737380;
+        color: ${(props) => props.theme.colors.secundaryText};
       }
 
       span {
         display: block;
         margin-top: 4px;
-        color: #6c6c80;
+        color: ${(props) => props.theme.colors.tertiaryText};
       }
     }
   }
@@ -80,7 +80,7 @@ export const Issues = styled.div`
   margin-top: 80px;
 
   a {
-    background: #fff;
+    background: ${(props) => props.theme.colors.primary};
     border-radius: 5px;
     width: 100%;
     padding: 24px;
@@ -105,19 +105,19 @@ export const Issues = styled.div`
 
       strong {
         font-size: 20px;
-        color: #3d3d4d;
+        color: ${(props) => props.theme.colors.primaryText};
       }
 
       p {
         font-size: 18px;
-        color: #a8a8b3;
+        color: ${(props) => props.theme.colors.tertiaryText};
         margin-top: 4px;
       }
     }
 
     svg {
       margin-left: auto;
-      color: #cbcbd6;
+      color: ${(props) => props.theme.colors.svg};
     }
   }
 `;

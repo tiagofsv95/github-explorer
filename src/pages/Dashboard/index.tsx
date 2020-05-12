@@ -1,11 +1,15 @@
-import React, { useState, useEffect, FormEvent } from 'react';
+import React, { useState, useEffect, FormEvent, useContext } from 'react';
 import { FiChevronRight } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+import Switch from 'react-switch';
+import { ThemeContext } from 'styled-components';
+
 import api from '../../services/api';
 
-import logo from '../../assets/logo.svg';
+import logoLight from '../../assets/logo.svg';
+import logoDark from '../../assets/logo-dark.svg';
 
-import { Title, Form, Error, Repositories } from './styles';
+import { Header, Title, Form, Error, Repositories } from './styles';
 
 interface Repository {
   full_name: string;
@@ -16,7 +20,15 @@ interface Repository {
   };
 }
 
-const Dashboard: React.FC = () => {
+interface Props {
+  toggleTheme(): void;
+}
+
+const Dashboard: React.FC<Props> = ({ toggleTheme }) => {
+  const { colors, title } = useContext(ThemeContext);
+
+  const logo = title === 'light' ? logoLight : logoDark;
+
   const [newRepo, setNewRepo] = useState('');
   const [inputError, setInputError] = useState('');
 
@@ -64,7 +76,24 @@ const Dashboard: React.FC = () => {
 
   return (
     <>
-      <img src={logo} alt="logo" />
+      <Header>
+        <img src={logo} alt="logo" />
+
+        <Switch
+          onChange={toggleTheme}
+          checked={title === 'light'}
+          checkedIcon={false}
+          uncheckedIcon={false}
+          height={15}
+          width={50}
+          handleDiameter={30}
+          offColor={colors.primaryText}
+          onColor={colors.primaryText}
+          offHandleColor={colors.primaryText}
+          onHandleColor={colors.primaryText}
+        />
+      </Header>
+
       <Title>Explore repositórios no Github</Title>
 
       <Form hasError={!!inputError} onSubmit={handleAddRepository}>

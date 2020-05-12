@@ -1,5 +1,6 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 import background from '../assets/background.svg';
+import backgroundDark from '../assets/background-dark.svg';
 
 export default createGlobalStyle`
 * {
@@ -10,8 +11,18 @@ export default createGlobalStyle`
 }
 
 body {
-  background: #F0F0F5 url(${background}) no-repeat 70% top;
-  -webkit-font-smoothing: antialiased;
+${(props) =>
+  props.theme.title === 'light'
+    ? css`
+        background: ${props.theme.colors.backgroud} url(${background}) no-repeat
+          70% top;
+        -webkit-font-smoothing: antialiased;
+      `
+    : css`
+        background: ${props.theme.colors.backgroud} url(${backgroundDark})
+          no-repeat 70% top;
+      `};
+-webkit-font-smoothing: antialiased;
 }
 
 body, input, button {
