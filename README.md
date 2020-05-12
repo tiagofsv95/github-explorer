@@ -23,7 +23,9 @@
 
 Uma aplicação aonde é possivel buscar um repositório no github e ver alguns detalhes desse repositorio, como sua lista de issues abertas.
 
-Para executar o projeto basta dar um `git clone https://github.com/tiagofsv95/github-explorer.git` no seu console e depois `yarn` para instalar as dependencias. Depois de instalar todas as dependencias basta executar `yarn start`.
+A aplicação esta hospedada no **[https://github-explorer-663fd.web.app/](https://github-explorer-663fd.web.app/)**
+
+Para executar o projeto localmente basta dar um `git clone https://github.com/tiagofsv95/github-explorer.git` no seu console e depois `yarn` para instalar as dependencias. Depois de instalar todas as dependencias basta executar `yarn start`.
 
 ## Ferramentas utilizadas na aplicação
 
@@ -40,6 +42,8 @@ Para executar o projeto basta dar um `git clone https://github.com/tiagofsv95/gi
 -**eslint**;
 
 -**prettier**;
+
+-**react-switch**;
 
 ### Funcionalidades da aplicação
 
