@@ -77,7 +77,9 @@ const Dashboard: React.FC<Props> = ({ toggleTheme }) => {
   return (
     <>
       <Header>
-        <img src={logo} alt="logo" />
+        <Link to="/">
+          <img src={logo} alt="logo" />
+        </Link>
 
         <Switch
           onChange={toggleTheme}
